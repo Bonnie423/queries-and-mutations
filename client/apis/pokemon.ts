@@ -4,6 +4,7 @@ import type { Pokemon } from '../../models/pokemon.ts'
 export async function getAllPokemon() {
   const response = await request.get('/api/v1/pokemon')
 
+
   return response.body as Pokemon[]
 }
 
@@ -22,6 +23,7 @@ export async function renamePokemon({
   id,
   newName,
 }: RenamePokemon): Promise<void> {
+  console.log(newName)
   await request.patch(`/api/v1/pokemon/${id}`).send({ name: newName })
 }
 

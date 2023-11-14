@@ -6,6 +6,7 @@ const router = express.Router()
 router.get('/', async (req, res) => {
   try {
     const pokemon = await db.getAllPokemon()
+
     res.json(pokemon)
   } catch (err) {
     console.log(err)
