@@ -12,7 +12,9 @@ interface AddPokemon {
   name: Pokemon['name']
 }
 export async function addPokemon({ name }: AddPokemon): Promise<void> {
-  await request.post('/api/v1/pokemon').send({ name })
+  const response = await request.post('/api/v1/pokemon').send({ name })
+  // console.log(response.body.pokemon)
+  return response.body.pokemon
 }
 
 interface RenamePokemon {
