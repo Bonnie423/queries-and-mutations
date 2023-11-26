@@ -11,7 +11,7 @@ export async function getPokemonById(id: number): Promise<Pokemon | undefined> {
 
 export async function addPokemon(name: string): Promise<Pokemon> {
    const [newPokemon]= await db('pokemon').insert({ name }).returning(['id', 'name'])
-  //  console.log(newPokemon)
+   console.log(newPokemon)
    return newPokemon
 }
 

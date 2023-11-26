@@ -57,6 +57,7 @@ export default function PokemonListItem({ id, name }: Props) {
     <div>
       {editing ? (
         <form onSubmit={handleEditSubmit} className={styles.form}>
+          <label htmlFor="reName">Re-Name</label>
           <input
             type="text"
             value={text}
