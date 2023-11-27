@@ -60,8 +60,10 @@ export default function PokemonListItem({ id, name }: Props) {
           <label htmlFor="reName">Re-Name</label>
           <input
             type="text"
+            id='reName'
             value={text}
             onChange={(e) => setText(e.target.value)}
+            
           />
           <button type="submit">Save</button>
           <button type="button" onClick={handleStopEditingClick}>
